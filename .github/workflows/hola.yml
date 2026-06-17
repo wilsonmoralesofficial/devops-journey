@@ -1,0 +1,10 @@
+name: Mi primer workflow
+on: push
+jobs:
+  saludar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Decir hola
+        run: echo "¡Mi primer pipeline funcionando!"
+      - name: Ver la fecha
+        run: date
