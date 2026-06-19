@@ -4,7 +4,7 @@ app = FastAPI()
 
 @app.get("/")
 def root():
-    return {"mensaje": "Mi primera API containerizada"}
+    return {"mensaje": "Prueba 2 CI/CD"}
 
 @app.get("/salud")
 def salud():
