@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: mi-api-service
+spec:
+  type: LoadBalancer          # ← Expone la app externamente
+  selector:
+    app: mi-api               # ← Conecta con los pods del deployment
+  ports:
+  - protocol: TCP
+    port: 8000                # ← Puerto externo
+    targetPort: 8000          # ← Puerto dentro del pod

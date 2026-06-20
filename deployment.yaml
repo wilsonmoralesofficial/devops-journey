@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mi-api
+  labels:
+    app: mi-api
+spec:
+  replicas: 3                    # ← Tres copias de tu API
+  selector:
+    matchLabels:
+      app: mi-api
+  template:
+    metadata:
+      labels:
+        app: mi-api
+    spec:
+      containers:
+      - name: api
+        image: ghcr.io/wilsonmoralesofficial/devops-journey:main    # ← Tu imagen publicada
+        ports:
+        - containerPort: 8000
