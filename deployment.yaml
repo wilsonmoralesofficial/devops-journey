@@ -16,6 +16,9 @@ spec:
     spec:
       containers:
       - name: api
-        image: ghcr.io/wilsonmoralesofficial/devops-journey:main    # ← Tu imagen publicada
+        image: ghcr.io/wilsonmoralesofficial/devops-journey:main-cfb7151   # ← Tu imagen publicada
         ports:
         - containerPort: 8000
+        envFrom:
+        - configMapRef:
+            name: mi-api-config
