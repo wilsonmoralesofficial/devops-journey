@@ -24,7 +24,7 @@ jobs:
       
       - name: Instalar dependencias
         run: |
-          pip install -r /mi-api/requirements.txt
+          pip install -r ../mi-api/requirements.txt
           pip install pytest httpx
       
       - name: Correr pruebas
